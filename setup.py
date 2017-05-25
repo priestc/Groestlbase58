@@ -4,10 +4,10 @@ setup(
     name='base58',
     py_modules=['base58'],
     version='0.2.5',
-    description='Base58 and Base58Check implementation',
-    author='David Keijser',
-    author_email='keijser@gmail.com',
-    url='https://github.com/keis/base58',
+    description='Base58 and Base58Check implementation with Groestl hashing',
+    author='Chris Priest',
+    author_email='cp368202@ohiou.edu',
+    url='https://github.com/priestc/Groestlbase58',
     license='MIT',
     entry_points={
         'console_scripts': [
