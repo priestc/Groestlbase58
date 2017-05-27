@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='groetslbase58',
+    name='groestlbase58',
     py_modules=['base58'],
     version='0.2.5',
     description='Base58 and Base58Check implementation with Groestl hashing',
@@ -11,7 +11,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'groetslbase58 = base58:main'
+            'groestlbase58 = base58:main'
         ]
     },
     classifiers=[

@@ -9,16 +9,16 @@ Groestlcoin network.
 
 ## Command line usage
 
-    $ printf "hello world" | Groestlbase58
+    $ printf "hello world" | groestlbase58
     StV1DL6CwTryKyV
 
-    $ printf "hello world" | Groestlbase58 -c
+    $ printf "hello world" | groestlbase58 -c
     3vQB7B6MrGQZaxCuFg4oh
 
-    $ printf "3vQB7B6MrGQZaxCuFg4oh" | Groestlbase58 -dc
+    $ printf "3vQB7B6MrGQZaxCuFg4oh" | groestlbase58 -dc
     hello world
 
-    $ printf "4vQB7B6MrGQZaxCuFg4oh" | Groestlbase58 -dc
+    $ printf "4vQB7B6MrGQZaxCuFg4oh" | groestlbase58 -dc
     Invalid checksum
 
 
