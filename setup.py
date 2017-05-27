@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='base58',
+    name='groetslbase58',
     py_modules=['base58'],
     version='0.2.5',
     description='Base58 and Base58Check implementation with Groestl hashing',
@@ -11,7 +11,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'base58 = base58:main'
+            'groetslbase58 = base58:main'
         ]
     },
     classifiers=[
@@ -23,4 +23,5 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 2',
     ],
+    dependency_links=['git+https://github.com/groestlcoin/groestlcoin-hash-python#egg=groestlcoin_hash'],
 )
