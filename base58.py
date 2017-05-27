@@ -12,10 +12,13 @@ with the bitcoin network.
 __version__ = '0.2.5'
 
 from hashlib import sha256
+import groestlcoin_hash
 
 # 58 character alphabet used
 alphabet = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
+def GroestlHash(x):
+    return groestlcoin_hash.getHash(x, len(x))
 
 if bytes == str:  # python2
     iseq = lambda s: map(ord, s)
@@ -93,7 +96,7 @@ def b58decode(v):
 def b58encode_check(v):
     '''Encode a string using Base58 with a 4 character checksum'''
 
-    digest = sha256(sha256(v).digest()).digest()
+    digest = GroestlHash(v)
     return b58encode(v + digest[:4])
 
 
@@ -102,7 +105,7 @@ def b58decode_check(v):
 
     result = b58decode(v)
     result, check = result[:-4], result[-4:]
-    digest = sha256(sha256(result).digest()).digest()
+    digest = GroestlHash(result)
 
     if check != digest[:4]:
         raise ValueError("Invalid checksum")
