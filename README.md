@@ -24,16 +24,16 @@ Groestlcoin network.
 
 ## Module usage
 
-    >>> import Groestlbase58
-    >>> Groestlbase58.b58encode(b'hello world')
+    >>> import groestlbase58
+    >>> groestlbase58.b58encode(b'hello world')
     'StV1DL6CwTryKyV'
-    >>> Groestlbase58.b58decode(b'StV1DL6CwTryKyV')
+    >>> groestlbase58.b58decode(b'StV1DL6CwTryKyV')
     b'hello world'
-    >>> Groestlbase58.b58encode_check(b'hello world')
+    >>> groestlbase58.b58encode_check(b'hello world')
     '3vQB7B6MrGQZaxCuFg4oh'
-    >>> Groestlbase58.b58decode_check(b'3vQB7B6MrGQZaxCuFg4oh')
+    >>> groestlbase58.b58decode_check(b'3vQB7B6MrGQZaxCuFg4oh')
     b'hello world'
-    >>> Groestlbase58.b58decode_check(b'4vQB7B6MrGQZaxCuFg4oh')
+    >>> groestlbase58.b58decode_check(b'4vQB7B6MrGQZaxCuFg4oh')
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
       File "base58.py", line 89, in b58decode_check

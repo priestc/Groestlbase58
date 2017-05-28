@@ -1,8 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='groestlbase58',
-    py_modules=['base58'],
+    py_modules=['groestlbase58'],
+    #packages=find_packages(),
     version='0.2.5',
     description='Base58 and Base58Check implementation with Groestl hashing',
     author='Chris Priest',
@@ -11,7 +12,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'groestlbase58 = base58:main'
+            'groestlbase58 = groestlbase58:main'
         ]
     },
     classifiers=[
